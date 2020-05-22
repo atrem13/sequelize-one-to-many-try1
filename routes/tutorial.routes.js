@@ -4,11 +4,11 @@ module.exports = function(express){
 
   router.get('/', tutorial.getAll);
   router.post('/', tutorial.save);
-  router.get('/:tutorialId', tutorial.get);
-  router.put('/:tutorialId', tutorial.update);
-  router.delete('/:tutorialId', tutorial.delete);
+  router.get('/find/:tutorialId', tutorial.get);
+  router.put('/edit/:tutorialId', tutorial.update);
+  router.delete('/delete/:tutorialId', tutorial.delete);
 
-  router.get('/with/search', tutorial.search);
+  router.get('/search/', tutorial.search);
 
   return router;
 }
